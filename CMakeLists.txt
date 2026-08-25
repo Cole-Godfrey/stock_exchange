@@ -9,7 +9,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
-include(Dependencies)
 
 add_library(exchange_project INTERFACE)
 
@@ -30,7 +29,7 @@ target_compile_options(
         -fno-exceptions
 )
 
-add_executable(exchange src/main.cpp)
+add_executable(exchange src/exchange_main.cpp)
 
 target_link_libraries(
     exchange
