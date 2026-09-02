@@ -34,4 +34,11 @@ namespace exchange::core {
         POST_ONLY,
         
     };
+    enum class OrderStatus : std::uint8_t {
+        NEW,
+        ACCEPTED,
+        PARTIALLY_FILLED,
+        FILLED,
+        CANCELED
+    };
 }
