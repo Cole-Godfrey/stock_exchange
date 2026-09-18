@@ -68,4 +68,16 @@ namespace exchange::core {
             return std::lexicographical_compare(lhs.begin(), lhs.end(), rhs.begin(), rhs.end());
         }
     };
+
+    static_assert(std::is_trivially_copyable_v<Price>);
+    static_assert(std::is_trivially_copyable_v<Quantity>);
+    static_assert(std::is_trivially_copyable_v<OrderId>);
+    static_assert(std::is_trivially_copyable_v<SequenceNumber>);
+    static_assert(std::is_trivially_copyable_v<Timestamp>);
+    static_assert(std::is_trivially_copyable_v<ParticipantId>);
+    static_assert(std::is_trivially_copyable_v<MatchId>);
+    static_assert(std::is_trivially_copyable_v<Side>);
+    static_assert(std::is_trivially_copyable_v<OrderType>);
+    static_assert(std::is_trivially_copyable_v<OrderStatus>);
+    static_assert(std::is_trivially_copyable_v<Symbol>);
 }
